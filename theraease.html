@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheraEase</title>
+
+  <link rel="stylesheet" href="\thraease.css">
+
+
+  <!-- font icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      TE <span>TheraEase</span>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#therapist">Therapists</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="book-btn">Book Sessions <span><i class="fa-solid fa-arrow-right"></i></span></a>
+  </header>
+
+  <!-- Hero section-->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Peace, Find Your Therapist</h1>
+      <p>Connect with certified therapists for online and in-person sessions<br> that fit your lifestyle.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn">Explore Therapist</a>
+        <a href="#" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+
+    <div class="booking-bar">
+      <div class="booking-item">
+        <label>Date</label>
+        <input type="date" />
+      </div>
+      <div class="booking-item">
+        <label>Session Type</label>
+        <select>
+          <option>Online
+          </option>
+          <option>In-Person</option>
+        </select>
+      </div>
+      <div class="booking-item">
+        <label>Therapist</label>
+        <select>
+          <option>Any Available</option>
+          <option>Psychologist</option>
+          <option>Relationship Coach</option>
+          <option>Child Therapist</option>
+        </select>
+      </div>
+      <button class="check-btn">Check Availability</button>
+    </div>
+  </section>
+
+
+  <!--About section-->
+  <section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <!--About 1-->
+    <div class="about-content">
+      <div class="about-image">
+        <img src="/asset/image/therapy.jpg" alt="Therapy Sessions">
+      </div>
+
+      <div class="about-text">
+        <h3> Why Choose THERAEASE</h3>
+        <p>At TheraEase, we believe everyone deserves access to mental wellness and emotional support.
+          Our mission is to make therapy simple, private, and convenient.
+          Whether you need online or in-person sessions, TheraEase connects you with licensed therapists
+          who truly understand your journey.
+        </p>
+        <a href="#" class="explore-btn">Explore More <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+
+    <!--About 2-->
+    <div class="about-content reverse">
+
+      <div class="about-text">
+        <h3>Accessible Therapy, Anytime</h3>
+        <p>We know that life can be busy — that’s why TheraEase offers flexible online therapy options.
+          Connect from anywhere, at any time, and still get the care and support you need.
+          Our therapists specialize in stress management, anxiety, depression, and more.</p>
+        <a href="#" class="explore-btn">Book a Session <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+
+      <div class="about-image">
+        <img src="/asset/image/online.jpg" alt="Online therapy">
+      </div>
+    </div>
+
+    <!--About 3-->
+    <div class="about-content">
+      <div class="about-image">
+        <img src="/asset/image/communities.jpg" alt="Therapy community">
+      </div>
+
+      <div class="about-text">
+        <h3>Empowering a Supportive Community</h3>
+        <p>
+          TheraEase isn’t just a booking platform — it’s a wellness community.
+          We promote open conversations around mental health,
+          offering tools, resources, and personalized recommendations to help you heal and grow.
+        </p>
+        <a href="#" class="explore-btn">Join The Community <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- services -->
+
+  <section class="services-section" id="services">
+    <div class="service-container">
+      <h2 class="slide-from-top">Services</h2>
+      <p class="slide-from-top" style="animation-delay: 0.2s;">Explore Our Therapy Sessions at TheraEAse</p>
+      <h3>View TheraEase therapy sessions</h3>
+      <div class="slide-down" style="animation-delay: 0.4s;">
+        <div class="filter-buttons">
+          <button class="blue">All</button>
+          <button class="service-button">Individual Therapy</button>
+          <button class="service-button">Couples Therapy</button>
+          <button class="service-button">Group Therapy</button>
+          <button class="service-button">Mental Wellness</button>
+        </div>
+      </div>
+
+      <div class="service-cards">
+        <div class="card">
+          <img src="/asset/image/individual-therapy.webp" alt="Individual Therapy">
+          <div class="card-content">
+            <h3>Individual Therapy</h3>
+            <p>Personal one-on-one sessions designed to help you manage stress, anxiety, and self-growth.</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/asset/image/couples.webp" alt="Couples Therapy">
+          <div class="card-content">
+            <h3>Couples Therapy</h3>
+            <p>Improve communication and rebuild trust in your relationship with guided sessions.</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/asset/image/group-therapy.webp" alt="Group Therapy">
+          <div class="card-content">
+            <h3>Group Therapy</h3>
+            <p>Join a supportive environment where you can connect and heal with others.</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/asset/image/mental-wellness.webp" alt="Mental Wellness">
+          <div class="card-content">
+            <h3>Mental Wellness Coaching</h3>
+            <p>Work on self-awareness, resilience, and emotional balance through guided wellness programs.</p>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- therapist -->
+
+  <section id="therapist" class="therapists-section">
+    <h2 class="thera-title">Therapists</h2>
+    <p class="text">Meet </p>
+    <p class="para">Our Therapist</p>
+
+    <!-- FILTER BUTTONS -->
+    <div class="therapist-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="individual">Individual Therapy</button>
+      <button class="filter-btn" data-filter="couples">Couples Therapy</button>
+      <button class="filter-btn" data-filter="group">Group Therapy</button>
+      <button class="filter-btn" data-filter="wellness">Mental Wellness</button>
+    </div>
+
+
+    <!-- GRID -->
+    <div class="therapist-grid">
+
+      <!-- Therapist Card -->
+      <article class="therapist-card tall" data-category="individual">
+        <img src="/asset/image/dr-amelia.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Amelia Hart</h3>
+          <p>Clinical Psychologist</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card medium" data-category="couples">
+        <img src="/asset/image/dr-michele.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Michael Brooks</h3>
+          <p>Couples Therapist</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card short" data-category="group">
+        <img src="/asset/image/dr-sarah.webp" alt="">
+        <div class="t-overlay">
+          <h3>Sarah Ojo</h3>
+          <p>Group Therapy Specialist</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card medium" data-category="wellness">
+        <img src="/asset/image/dr-okoro.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Nathan Okoro</h3>
+          <p>Mental Wellness Coach</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card medium" data-category="wellness">
+        <img src="/asset/image/dr-lina.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Lina Gomez</h3>
+          <p>Mental Wellness Coach</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card medium" data-category="couples">
+        <img src="/asset/image/dr-ethan.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Ethan Cole</h3>
+          <p>Relationship Therapist</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+
+      <article class="therapist-card medium" data-category="group">
+        <img src="/asset/image/dr-maya.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Maya Bello</h3>
+          <p>Group Facilitator</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+
+      <article class="therapist-card medium" data-category="individual">
+        <img src="/asset/image/dr-bello.webp" alt="">
+        <div class="t-overlay">
+          <h3>Dr. Jonas Reed</h3>
+          <p>Therapist</p>
+          <a href="#">Book Session</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- Resourses -->
+
+
+  <section class="resources-section" id="resources">
+    <h2 class="sec-title">Resources</h2>
+
+
+    <div class="resource-controls">
+      <input type="text" id="searchInput" placeholder="Search resources...">
+
+      <div class="filters">
+        <button class="filter-btnn active" data-filter="all">All</button>
+        <button class="filter-btnn" data-filter="anxiety">Anxiety</button>
+        <button class="filter-btnn" data-filter="relationships">Relationships</button>
+        <button class="filter-btnn" data-filter="stress">Stress</button>
+        <button class="filter-btnn" data-filter="wellness">Wellness</button>
+      </div>
+    </div>
+
+
+    <div class="slider-wrapper">
+      <button class="slide-btn left">&#10094;</button>
+
+      <div class="slider" id="resourceSlider">
+
+        <!-- Resource Card 1 -->
+        <article class="resource-card" data-category="anxiety">
+          <img src="/asset/image/anxienty.webp" alt="">
+          <div class="overlay">
+            <h3>Managing Anxiety in Daily Life</h3>
+            <p>Simple techniques to help you stay grounded and calm.</p>
+            <!-- <a href="#">Read More</a> -->
+          </div>
+        </article>
+
+        <!-- Resource Card 2 -->
+        <article class="resource-card" data-category="relationships">
+          <img src="/asset/image/healthy-relationship.jpg" alt="">
+          <div class="overlay">
+            <h3>Building Healthy Relationships</h3>
+            <p>Improve communication, trust, and emotional bonding.</p>
+            <!-- <a href="#">Read More</a> -->
+          </div>
+        </article>
+
+        <!-- Resource Card 3 -->
+        <article class="resource-card" data-category="stress">
+          <img src="/asset/image/stress-relief.webp" alt="">
+          <div class="overlay">
+            <h3>Stress Relief Techniques</h3>
+            <p>Learn practical ways to release stress naturally.</p>
+            <!-- <a href="#">Read More</a> -->
+          </div>
+        </article>
+
+        <!-- Resource Card 4 -->
+        <article class="resource-card" data-category="wellness">
+          <img src="/asset/image/wellness.webp" alt="">
+          <div class="overlay">
+            <h3>Boosting Your Mental Wellness</h3>
+            <p>Daily habits that create emotional balance.</p>
+            <!-- <a href="#">Read More</a> -->
+          </div>
+        </article>
+
+      </div>
+
+      <button class="slide-btn right">&#10095;</button>
+    </div>
+  </section>
+
+
+
+
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2>Your Journey to Healing Starts Here</h2>
+      <p>Connect with our therapists today and take the first step toward emotional wellness.</p>
+      <a href="#contact" class="cta-btn">Book a Session</a>
+    </div>
+  </section>
+
+
+
+
+  <!-- contact us -->
+
+
+
+  <section class="contact-section" id="contact">
+    <h3>Contact <span>TheraEAse</span></h3>
+    <div class="contact-top">
+      <!-- MAP -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.828!2d7.428!3d9.076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOTSsw5AgMDcnNDQuMCJOIDfCsDI1JzQwLjAiRQ!5e0!3m2!1sen!2sng!4v0000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- DETAILS -->
+
+      <div class="contact-details">
+        <p>St. Albans Road, Babbacombe, Torquay, South Devon TQ3 3LS</p>
+
+        <p><strong>CALL US:</strong> 01803 327087</p>
+        <p><strong>FAX US:</strong> 01803 329967</p>
+        <p><strong>WHATSAPP:</strong> +234 903 111 2222</p>
+        <p><strong>EMAIL:</strong> support@theraease.com</p>
+        <p><strong>Message Us:</strong></p>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+      </div>
+    </div>
+
+    <!-- BOTTOM AREA -->
+    <div class="contact-bottom">
+      <div class="contact-left">
+        <h4>Get in touch with us</h4>
+
+        <div class="social-icons">
+          <a href="#"><i class="fa-solid fa-globe"></i></a>
+          <a href="#"><i class="fa-solid fa-message"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <p> Whether you have a question, need support, or want to book a therapy session,<br>
+          we’re always happy to hear from you.</p>
+        <a href="#" class="contact-link">Contact Support <span><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>Copyright © 2025. All Rights Reserved. Designed with love by Dauda Mariam</p>
+        <div class="footer-links">
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+  <script src="theraease.js"></script>
+</body>
+
+</html>
