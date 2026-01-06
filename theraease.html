@@ -141,16 +141,16 @@
       <h3>View TheraEase therapy sessions</h3>
       <div class="slide-down" style="animation-delay: 0.4s;">
         <div class="filter-buttons">
-          <button class="blue">All</button>
-          <button class="service-button">Individual Therapy</button>
-          <button class="service-button">Couples Therapy</button>
-          <button class="service-button">Group Therapy</button>
-          <button class="service-button">Mental Wellness</button>
+          <button class="modern-filter-btn active" data-filter="all">All</button>
+          <button class="modern-filter-btn" data-filter="individual">Individual Therapy</button>
+          <button class="modern-filter-btn" data-filter="couples">Couples Therapy</button>
+          <button class="modern-filter-btn" data-filter="group">Group Therapy</button>
+          <button class="modern-filter-btn" data-filter="wellness">Mental Wellness</button>
         </div>
       </div>
 
       <div class="service-cards">
-        <div class="card">
+        <div class="card" data-category="individual">
           <img src="/asset/image/individual-therapy.webp" alt="Individual Therapy">
           <div class="card-content">
             <h3>Individual Therapy</h3>
@@ -159,7 +159,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="couples">
           <img src="/asset/image/couples.webp" alt="Couples Therapy">
           <div class="card-content">
             <h3>Couples Therapy</h3>
@@ -168,7 +168,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="group">
           <img src="/asset/image/group-therapy.webp" alt="Group Therapy">
           <div class="card-content">
             <h3>Group Therapy</h3>
@@ -177,7 +177,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="wellness">
           <img src="/asset/image/mental-wellness.webp" alt="Mental Wellness">
           <div class="card-content">
             <h3>Mental Wellness Coaching</h3>
@@ -202,11 +202,11 @@
 
     <!-- FILTER BUTTONS -->
     <div class="therapist-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="individual">Individual Therapy</button>
-      <button class="filter-btn" data-filter="couples">Couples Therapy</button>
-      <button class="filter-btn" data-filter="group">Group Therapy</button>
-      <button class="filter-btn" data-filter="wellness">Mental Wellness</button>
+      <button class="modern-filter-btn active" data-filter="all">All</button>
+      <button class="modern-filter-btn" data-filter="individual">Individual Therapy</button>
+      <button class="modern-filter-btn" data-filter="couples">Couples Therapy</button>
+      <button class="modern-filter-btn" data-filter="group">Group Therapy</button>
+      <button class="modern-filter-btn" data-filter="wellness">Mental Wellness</button>
     </div>
 
 
@@ -308,11 +308,11 @@
       <input type="text" id="searchInput" placeholder="Search resources...">
 
       <div class="filters">
-        <button class="filter-btnn active" data-filter="all">All</button>
-        <button class="filter-btnn" data-filter="anxiety">Anxiety</button>
-        <button class="filter-btnn" data-filter="relationships">Relationships</button>
-        <button class="filter-btnn" data-filter="stress">Stress</button>
-        <button class="filter-btnn" data-filter="wellness">Wellness</button>
+        <button class="modern-filter-btn active" data-filter="all">All</button>
+        <button class="modern-filter-btn" data-filter="anxiety">Anxiety</button>
+        <button class="modern-filter-btn" data-filter="relationships">Relationships</button>
+        <button class="modern-filter-btn" data-filter="stress">Stress</button>
+        <button class="modern-filter-btn" data-filter="wellness">Wellness</button>
       </div>
     </div>
 

@@ -408,46 +408,39 @@ body{
 }
 
 
+/* Modern Filter Buttons */
 .filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Better spacing */
+  flex-wrap: wrap; /* Responsive wrapping */
   margin-bottom: 40px;
-  gap: 500px;
 } 
 
-.blue{
-  background: #007bff;
-  border: 1px solid #007bff;
-  color: #fff;
-  padding: 15px 25px;
-  margin: 5px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-
-
-.blue:hover{
-  transform: translateY(-5px);
-}
-
-
-.service-button{
+.modern-filter-btn {
   background: transparent;
-  border: 1px solid #007bff;
+  border: 2px solid #007bff;
   color: #007bff;
-  padding: 15px 25px;
-  margin: 5px;
-  border-radius: 30px;
+  padding: 12px 28px;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
 }
 
+.modern-filter-btn:hover {
+  background: rgba(0, 123, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
 
-.service-button:hover {
-  background-color: #007bff;
+.modern-filter-btn.active {
+  background: #007bff;
   color: #fff;
-  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .service-cards {
