@@ -117,20 +117,7 @@ window.addEventListener('load', () => {
 });
 
 
-// Resource Slider
-const slider = document.getElementById("resourceSlider");
-const btnLeft = document.querySelector(".slide-btn.left");
-const btnRight = document.querySelector(".slide-btn.right");
 
-if (slider && btnLeft && btnRight) {
-  btnLeft.addEventListener("click", () => {
-    slider.scrollLeft -= 350;
-  });
-
-  btnRight.addEventListener("click", () => {
-    slider.scrollLeft += 350;
-  });
-}
 
 
 // Search Bar Logic (Resource Section)
