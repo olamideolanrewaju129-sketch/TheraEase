@@ -811,12 +811,8 @@ body{
     padding: 1.3rem;
     background: rgba(0, 0, 0, 0.55);
     color: white;
-    transform: translateY(100%);
-    transition: 0.35s ease;
-}
-
-.resource-card:hover .overlay {
     transform: translateY(0);
+    transition: 0.35s ease;
 }
 
 .overlay h3 {
