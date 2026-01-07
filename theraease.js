@@ -1,28 +1,21 @@
-const title = document.querySelector('.section-title');
-const images = document.querySelectorAll('.about-image');
-const texts = document.querySelectorAll('.about-text');
-
-function revealOnScroll() {
-  const triggerBottom = window.innerHeight * 0.8;
-
-  if (title) {
-    const titleTop = title.getBoundingClientRect().top;
-    if (titleTop < triggerBottom) title.classList.add('show');
-  }
-
-  images.forEach((img, i) => {
-    const imgTop = img.getBoundingClientRect().top;
-    if (imgTop < triggerBottom) img.classList.add('show');
-
-    if (texts[i]) {
-      const textTop = texts[i].getBoundingClientRect().top;
-      if (textTop < triggerBottom) texts[i].classList.add('show');
+/* ==========================
+   ABOUT SECTION ANIMATIONS
+   (Re-triggers on scroll)
+   ========================== */
+const aboutObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show'); // Remove class to re-trigger animation
     }
   });
-}
+}, {
+  threshold: 0.1 // Trigger when 10% of the element is visible
+});
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+const aboutElements = document.querySelectorAll('.section-title, .about-image, .about-text');
+aboutElements.forEach(el => aboutObserver.observe(el));
 
 
 /* ==========================
@@ -155,7 +148,7 @@ if (searchInput) {
 
 
 // Scroll Animations (Extra)
-const revealElements = document.querySelectorAll(".section-title, .resource-card");
+const revealElements = document.querySelectorAll(".resource-card");
 
 // Note: 'IntersectionObserverr' in original code was likely a typo. Fixed to IntersectionObserver elsewhere or checking existence.
 // Assuming standart IntersectionObserver needs to be used here if distinct from line 53.
