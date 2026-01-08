@@ -1069,7 +1069,16 @@ flex-wrap: wrap;
 gap: 10px;
 }
 
+.footer-links{
+ color: #007bff !important; 
+ font-weight: bold;
+ font-size: 0.95rem;
+ text-decoration: none;
+}
 
+.footer-links:hover{
+  color: #222;
+}
 
 
 
