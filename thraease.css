@@ -1560,3 +1560,240 @@ transform: translateY(-5px);
   }
 }
 
+}
+
+/* ========================
+   LEARN MORE PAGE STYLES
+   ======================== */
+
+/* Learn Hero */
+.learn-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,123,255,0.8), rgba(0,86,179,0.8)), url('/asset/image/communities.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  margin-top: 80px; /* Offset fixed nav */
+}
+
+.learn-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.learn-hero-content p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Process Section (How It Works) */
+.process-section {
+  padding: 80px 8%;
+  background: #fff;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.step-card .icon-box {
+  width: 80px;
+  height: 80px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 auto 20px;
+}
+
+/* Info Sections (Mission / Vision) */
+.info-section {
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.info-section.reverse-layout {
+  flex-direction: row-reverse;
+  background: #f4f7fc;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.info-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.values-list li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.values-list li i {
+  color: #007bff;
+}
+
+.info-image {
+  flex: 1;
+}
+
+.info-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 80px 8%;
+  background: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-container {
+  margin-top: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question i {
+  transition: transform 0.3s ease;
+  color: #007bff;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 20px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-light {
+  background: white;
+  color: #007bff;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.btn-light:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Adjustments for Learn More */
+@media (max-width: 768px) {
+  .learn-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-section.reverse-layout {
+    flex-direction: column;
+  }
+  
+  .values-list {
+    text-align: left;
+    display: inline-block;
+  }
+}
