@@ -1276,15 +1276,3 @@ gap: 10px;
   opacity: 1;
   transform: translateX(0);
 }
-
-/* Universal Scroll Slide Down (For all H2s) */
-.scroll-slide-down {
-  opacity: 0;
-  transform: translateY(-50px); /* Start higher */
-  transition: all 1s ease-out;
-}
-
-.scroll-slide-down.show {
-  opacity: 1;
-  transform: translateY(0); /* Drop to normal position */
-}
