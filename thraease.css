@@ -1244,3 +1244,23 @@ gap: 10px;
     font-size: 1.8rem;
   }
 }
+
+/* Button Float Animation */
+@keyframes highlightSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-animate {
+  opacity: 0;
+}
+
+.btn-animate.show {
+  animation: highlightSlideDown 0.6s ease-out forwards;
+}
