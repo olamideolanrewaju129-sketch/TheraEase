@@ -194,3 +194,15 @@ navItems.forEach(item => {
     }
   });
 });
+
+// Animate Filter Buttons Staggered
+const filterGroups = document.querySelectorAll('.filter-buttons, .therapist-filters, .filters');
+
+filterGroups.forEach(group => {
+  const buttons = group.querySelectorAll('button');
+  buttons.forEach((btn, index) => {
+    btn.classList.add('btn-animate');
+    btn.style.animationDelay = `${index * 0.1}s`; // Stagger delay: 0s, 0.1s, 0.2s...
+    observer.observe(btn);
+  });
+});
