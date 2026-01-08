@@ -207,16 +207,3 @@ filterGroups.forEach(group => {
   });
 });
 });
-
-// Universal H2 Animation
-const allHeadings = document.querySelectorAll('h2');
-allHeadings.forEach(h2 => {
-  // Remove conflicting animation class if present
-  h2.classList.remove('slide-from-top');
-
-  // Add universal slide class
-  h2.classList.add('scroll-slide-down');
-
-  // Observe
-  observer.observe(h2);
-});
