@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
    OTHER ANIMATIONS & UTILS
    ========================== */
 
-const elements = document.querySelectorAll('.fade-in, .animate-down, .animate-up, .slide-in-left');
+const elements = document.querySelectorAll('.fade-in, .animate-down, .animate-up, .slide-in-left, .slide-in-right');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
