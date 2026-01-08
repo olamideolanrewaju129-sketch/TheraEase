@@ -207,3 +207,25 @@ filterGroups.forEach(group => {
   });
 });
 
+});
+
+// FAQ Accordion Logic
+const faqs = document.querySelectorAll('.faq-question');
+faqs.forEach(faq => {
+  faq.addEventListener('click', () => {
+    const answer = faq.nextElementSibling;
+    const icon = faq.querySelector('i');
+
+    // Toggle active class
+    faq.classList.toggle('active');
+
+    // Toggle Answer visibility
+    if (faq.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.style.transform = "rotate(180deg)";
+    } else {
+      answer.style.maxHeight = "0";
+      icon.style.transform = "rotate(0deg)";
+    }
+  });
+});
