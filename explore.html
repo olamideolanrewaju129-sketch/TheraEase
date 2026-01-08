@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore-Therapist</title>
+    <title>Explore Therapists - TheraEase</title>
+    <link rel="stylesheet" href="thraease.css">
+    <!-- font icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
-     <header class="navbar">
+    <header class="navbar">
         <div class="logo">
             TE <span>TheraEase</span>
         </div>
@@ -27,5 +33,226 @@
         </nav>
         <a href="/book.html" class="book-btn">Book Sessions <span><i class="fa-solid fa-arrow-right"></i></span></a>
     </header>
+
+    <div class="explore-header" style="margin-top: 100px; text-align: center; padding: 40px 20px;">
+        <h2 class="section-title show">Find Your Perfect Match</h2>
+        <p style="color: #666; font-size: 1.2rem; margin-bottom: 30px;">Browse our extensive list of certified
+            professionals.</p>
+
+        <!-- Reuse existing filter classes for functionality -->
+        <div class="therapist-filters filter-buttons">
+            <button class="modern-filter-btn active" data-filter="all">All</button>
+            <button class="modern-filter-btn" data-filter="individual">Individual</button>
+            <button class="modern-filter-btn" data-filter="couples">Couples</button>
+            <button class="modern-filter-btn" data-filter="group">Group</button>
+            <button class="modern-filter-btn" data-filter="wellness">Wellness</button>
+        </div>
+    </div>
+
+    <!-- Explore Grid Section -->
+    <section class="explore-section" style="padding: 20px 8%;">
+
+        <!-- Using a new specific grid class for 3 columns -->
+        <div class="explore-grid therapist-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;">
+
+            <!-- Cards re-using 'card' style from services but with therapist data -->
+            <!-- Card 1 -->
+            <div class="card therapist-card animate-down" data-category="individual">
+                <img src="/asset/image/dr-amelia.webp" alt="Dr. Amelia Hart"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Amelia Hart</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Clinical
+                        Psychologist</p>
+                    <p>Expert in anxiety and cognitive behavioral therapy. individualized care plans.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card therapist-card animate-down" data-category="couples">
+                <img src="/asset/image/dr-michele.webp" alt="Dr. Michael Brooks"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Michael Brooks</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Couples
+                        Therapist</p>
+                    <p>Helping couples reconnect through effective communication strategies.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card therapist-card animate-down" data-category="group">
+                <img src="/asset/image/dr-sarah.webp" alt="Sarah Ojo"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Sarah Ojo</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Group Therapy
+                        Specialist</p>
+                    <p>Facilitating supportive group environments for shared healing.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card therapist-card animate-up" data-category="wellness">
+                <img src="/asset/image/dr-okoro.webp" alt="Dr. Nathan Okoro"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Nathan Okoro</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Mental Wellness
+                        Coach</p>
+                    <p>Building resilience and emotional balance for daily life.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card therapist-card animate-up" data-category="wellness">
+                <img src="/asset/image/dr-lina.webp" alt="Dr. Lina Gomez"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Lina Gomez</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Wellness
+                        Specialist</p>
+                    <p>Holistic approaches to mental health and stress reduction.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card therapist-card animate-up" data-category="couples">
+                <img src="/asset/image/dr-ethan.webp" alt="Dr. Ethan Cole"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Ethan Cole</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Relationship
+                        Therapist</p>
+                    <p>Specializing in conflict resolution and relationship growth.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card therapist-card animate-up" data-category="group">
+                <img src="/asset/image/dr-maya.webp" alt="Dr. Maya Bello"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Maya Bello</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Group
+                        Facilitator</p>
+                    <p>Creating safe spaces for community healing and support.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card therapist-card animate-up" data-category="individual">
+                <img src="/asset/image/dr-bello.webp" alt="Dr. Jonas Reed"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Jonas Reed</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Therapist</p>
+                    <p>Focused on individual trauma recovery and personal development.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card therapist-card slide-in-left" data-category="individual">
+                <img src="/asset/image/dr-lina.webp" alt="Dr. Emily Stone"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Emily Stone</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Child
+                        Psychologist</p>
+                    <p>Dedicated to helping children and adolescents navigate emotional challenges.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card therapist-card slide-in-right" data-category="wellness">
+                <img src="/asset/image/dr-okoro.webp" alt="Dr. David Kim"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. David Kim</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Addiction
+                        Specialist</p>
+                    <p>Supporting recovery with compassionate, evidence-based approaches.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="card therapist-card animate-down" data-category="individual">
+                <img src="/asset/image/dr-maya.webp" alt="Dr. Olivia Green"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. Olivia Green</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Trauma
+                        Specialist</p>
+                    <p>Helping clients heal from past trauma and reclaim their lives.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="card therapist-card animate-up" data-category="wellness">
+                <img src="/asset/image/dr-michele.webp" alt="Dr. James Wilson"
+                    style="height: 300px; object-fit: cover; width: 100%;">
+                <div class="card-content" style="padding: 20px; text-align: left;">
+                    <h3>Dr. James Wilson</h3>
+                    <p style="color: #007bff; font-weight: 600; font-size: 0.9rem; margin-bottom: 10px;">Sleep Therapist
+                    </p>
+                    <p>Specializing in insomnia and sleep disorders for better health.</p>
+                    <a href="/book.html" class="btn"
+                        style="background: #007bff; border-radius: 20px; margin-top: 10px; display: inline-block;">Book
+                        Session</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>Copyright © 2025. All Rights Reserved. Designed with love by Dauda Mariam</p>
+                <div class="footer-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="theraease.js"></script>
 </body>
+
 </html>
