@@ -207,7 +207,7 @@ filterGroups.forEach(group => {
   });
 });
 
-});
+
 
 // FAQ Accordion Logic
 const faqs = document.querySelectorAll('.faq-question');
