@@ -1245,6 +1245,22 @@ gap: 10px;
   }
 }
 
+/* Staggered Animation for Form Fields */
+.booking-form .form-group, 
+.booking-form .form-row,
+.booking-form .submit-btn {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.booking-form .form-group:nth-child(1) { animation-delay: 0.2s; }
+.booking-form .form-group:nth-child(2) { animation-delay: 0.3s; }
+.booking-form .form-row:nth-child(3) { animation-delay: 0.4s; }
+.booking-form .form-row:nth-child(4) { animation-delay: 0.5s; }
+.booking-form .form-group:nth-child(5) { animation-delay: 0.6s; }
+.booking-form .submit-btn { animation-delay: 0.7s; }
+
+
 /* Button Float Animation */
 @keyframes highlightSlideDown {
   0% {
