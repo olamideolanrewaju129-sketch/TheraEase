@@ -70,7 +70,7 @@ body{
 
 .logo span{
   font-weight: 400;
-  color: #d1d1d1;
+  color: var(--text-muted);
 }
 
 .nav-links{
@@ -903,13 +903,14 @@ body{
 
 .contact-section {
   padding: 4rem 2rem;
-  background: #f5f5f5;
+  background: var(--bg-primary);
+  transition: var(--transition);
 }
 
 .contact-title {
   text-align: center;
   font-size: 3rem;
-  color: #007bff;
+  color: var(--primary-color);
   margin-bottom: 3rem;
   opacity: 0;
   font-weight: 500;
@@ -953,7 +954,7 @@ body{
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #222;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 50px;
 }
@@ -962,11 +963,11 @@ body{
   font-size: rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #007bff;
+  color: var(--primary-color);
 }
 .contact-details p {
   margin: 8px 0;
-  color: #333;
+  color: var(--text-secondary);
   font-size: 1.02rem;
 }
 
@@ -996,7 +997,7 @@ body{
     font-size: 18px;
     margin-right: 12px;
     text-decoration: none;
-    color: #000;
+    color: var(--text-primary);
 }
 
 .contact-right {
@@ -1545,7 +1546,7 @@ transform: translateY(-5px);
   border-color: var(--primary-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-  background: #fff;
+  background: var(--bg-secondary);
 }
 
 .booking-form .submit-btn {
@@ -1942,3 +1943,16 @@ transform: translateY(-5px);
 .hotline-card a {
   color: var(--primary-color) !important;
 }
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
