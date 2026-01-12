@@ -139,11 +139,6 @@ if (searchInput) {
 // Scroll Animations (Extra)
 const revealElements = document.querySelectorAll(".resource-card");
 
-// Note: 'IntersectionObserverr' in original code was likely a typo. Fixed to IntersectionObserver elsewhere or checking existence.
-// Assuming standart IntersectionObserver needs to be used here if distinct from line 53.
-// But let's stick to the earlier observer if possible, or create a new valid one.
-// The original code had `new IntersectionObserverr` (typo). I will fix it.
-
 const scrollObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -154,12 +149,6 @@ const scrollObserver = new IntersectionObserver(entries => {
 });
 
 revealElements.forEach(el => scrollObserver.observe(el));
-
-
-
-
-
-
 
 
 // Mobile Menu Toggle
@@ -228,4 +217,144 @@ faqs.forEach(faq => {
       icon.style.transform = "rotate(0deg)";
     }
   });
+});
+
+
+/* ==========================
+   CHECK AVAILABILITY LOGIC
+   ========================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. HOME PAGE: Check Availability Click
+  const checkBtn = document.getElementById('check-availability-btn');
+  if (checkBtn) {
+    checkBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const date = document.getElementById('hero-date').value;
+      const type = document.getElementById('hero-session-type').value;
+      const therapist = document.getElementById('hero-therapist').value;
+
+      // Construct URL parameters
+      const params = new URLSearchParams({
+        date: date,
+        type: type,
+        therapist: therapist
+      });
+
+      // Redirect to availability page
+      window.location.href = `/availability.html?${params.toString()}`;
+    });
+  }
+
+  // 2. AVAILABILITY PAGE: Render Mock Results
+  const availabilityMsg = document.getElementById('availability-message');
+  const resultsContainer = document.getElementById('availability-results');
+
+  if (availabilityMsg && resultsContainer) {
+    const params = new URLSearchParams(window.location.search);
+    const date = params.get('date');
+    const type = params.get('type') || 'Online';
+    const therapist = params.get('therapist') || 'Any Available';
+
+    let displayDate = date ? new Date(date).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : 'Flexible Dates';
+
+    availabilityMsg.innerHTML = `Showing results for <strong>${type}</strong> session with <strong>${therapist}</strong> on <br><strong>${displayDate}</strong>`;
+
+    // Mock Data for slots
+    const mockSlots = [
+      { time: '09:00 AM', doctor: therapist === 'Any Available' ? 'Dr. Amelia Hart' : therapist },
+      { time: '11:00 AM', doctor: therapist === 'Any Available' ? 'Dr. Michael Brooks' : therapist },
+      { time: '02:00 PM', doctor: therapist === 'Any Available' ? 'Sarah Ojo' : therapist },
+      { time: '04:30 PM', doctor: therapist === 'Any Available' ? 'Dr. Nathan Okoro' : therapist }
+    ];
+
+    // Generate Cards
+    mockSlots.forEach(slot => {
+      const card = document.createElement('div');
+      card.className = 'slot-card';
+      // Inline styles for simplicity, move to CSS for production
+      card.style.cssText = 'background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; transition: 0.3s;';
+
+      card.innerHTML = `
+        <div class="time" style="font-size: 1.4rem; color: #007bff; font-weight: 700; margin-bottom: 10px;">${slot.time}</div>
+        <div class="details" style="color: #555; margin-bottom: 20px;">
+          <p style="font-weight:600; font-size: 1.1rem; margin-bottom: 5px;">${slot.doctor}</p>
+          <p style="font-size: 0.9rem;">${type} Session</p>
+        </div>
+        <a href="#" class="btn book-slot-btn" data-time="${slot.time}" data-doctor="${slot.doctor}" 
+           style="background: #007bff; border-radius: 50px; display: inline-block; padding: 10px 25px; color: #fff; text-decoration: none;">Book Now</a>
+      `;
+
+      // Add hover effect via JS listener or CSS class 'slot-card:hover' in CSS file
+      card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-5px)');
+      card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0)');
+
+      resultsContainer.appendChild(card);
+    });
+
+    // Handle "Book Now" click on availability page
+    resultsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('book-slot-btn')) {
+        e.preventDefault();
+        const time = e.target.getAttribute('data-time');
+        const doctor = e.target.getAttribute('data-doctor');
+
+        // Redirect to Booking Page with all details
+        const bookParams = new URLSearchParams({
+          date: date || '',
+          type: type,
+          therapist: doctor, // Use specific doctor chosen
+          time: time
+        });
+        window.location.href = `/book.html?${bookParams.toString()}`;
+      }
+    });
+
+  }
+
+
+  // 3. BOOKING PAGE: Pre-fill Form
+  const bookingForm = document.querySelector('.booking-form');
+  if (bookingForm) {
+    const params = new URLSearchParams(window.location.search);
+
+    const dateInput = document.getElementById('date');
+    const typeInput = document.getElementById('session-type');
+    const therapistInput = document.getElementById('therapist-select');
+    // Note: If you have a time field in the future, pre-fill it too. 
+    // Currently adding 'Time' to notes if no field exists or just leaving it.
+
+    if (params.has('date') && dateInput) dateInput.value = params.get('date');
+    if (params.has('type') && typeInput) {
+      // Simple mapping if values match exactly
+      // Lowercase comparison
+      const typeVal = params.get('type').toLowerCase();
+      Array.from(typeInput.options).forEach(opt => {
+        if (opt.value.includes(typeVal) || typeVal.includes(opt.value)) {
+          typeInput.value = opt.value;
+        }
+      });
+    }
+
+    if (params.has('therapist') && therapistInput) {
+      const therapistVal = params.get('therapist');
+      // Try to find matching option
+      let found = false;
+      Array.from(therapistInput.options).forEach(opt => {
+        if (opt.text.includes(therapistVal) || therapistVal.includes(opt.text)) {
+          therapistInput.value = opt.value;
+          found = true;
+        }
+      });
+    }
+
+    // Optional: Add Time to message/notes if provided
+    const messageInput = document.getElementById('message');
+    if (params.has('time') && messageInput) {
+      messageInput.value = `Requested Time: ${params.get('time')}\n` + messageInput.value;
+    }
+
+  }
+
 });
