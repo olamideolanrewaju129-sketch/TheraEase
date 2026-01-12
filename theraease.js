@@ -184,6 +184,32 @@ navItems.forEach(item => {
   });
 });
 
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+    navLinks.classList.remove('active');
+    const icon = hamburger.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
+});
+
+// Smooth Scroll for Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      e.preventDefault();
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
 // Animate Filter Buttons Staggered
 const filterGroups = document.querySelectorAll('.filter-buttons, .therapist-filters, .filters');
 
