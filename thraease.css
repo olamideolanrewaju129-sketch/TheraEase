@@ -1,4 +1,35 @@
 
+:root {
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #ffffff;
+  --text-primary: #222222;
+  --text-secondary: #444444;
+  --text-muted: #666666;
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --nav-bg: rgba(0, 0, 0, 0.4);
+  --card-bg: #ffffff;
+  --border-color: #eeeeee;
+  --footer-bg: #111111;
+  --white: #ffffff;
+  --black: #000000;
+  --transition: 0.3s ease;
+}
+
+body.dark-mode {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --footer-bg: #020617;
+  --white: #f8fafc;
+}
 
 *{
   padding: 0;
@@ -12,8 +43,9 @@ html{
 }
  
 body{
-  color: #000;;
-  background: #f9f9f9;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 /* navbar */
@@ -28,7 +60,7 @@ body{
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur (10px);
-  background:rgba(0, 0, 0, 0.4) ;
+  background: var(--nav-bg);
 }
 
 .logo{
@@ -66,7 +98,7 @@ body{
   bottom: -10px;
   height: 2px;
   opacity: 0;
-  background-color: #007bff; 
+  background-color: var(--primary-color); 
   transform: scaleX(0);
   transition: width 0.3s ease;
 }
@@ -79,7 +111,7 @@ body{
 
 
 .book-btn {
-  background: #007bff;
+  background: var(--primary-color);
   padding: 15px 25px;
   color: #fff;
   text-decoration: none;
@@ -96,8 +128,24 @@ body{
 
 
 .book-btn:hover {
-  background: #eee;
-  color: #007bff;
+  background: var(--border-color);
+  color: var(--primary-color);
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-right: 25px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
 }
 
 /* Hero section */
@@ -190,7 +238,7 @@ body{
 }
 
 .check-btn {
-  background: #007bff;
+  background: var(--primary-color);
   border: none;
   padding: 10px 25px;
   border-radius: 6px;
@@ -208,9 +256,10 @@ body{
 
 .about{
   padding: 100px 70px;
-  background: #f5f5f5 ;
-  color: #222;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .section-title{
@@ -220,10 +269,10 @@ body{
   text-align: center;
   font-size: 3.5rem;
   font-weight: 600;
-  color: #000;
+  color: var(--text-primary);
   opacity: 0;
   transform: translateY(-50px);
-  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), color var(--transition);
 }
 
 .section-title::after {
@@ -235,7 +284,7 @@ body{
   transform-origin: center;
   width: 100px;
   height: 3px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   border-radius: 5px;
   transition: transform 0.5s ease;
 }
@@ -303,21 +352,21 @@ body{
 
 .about-text h3{
   font-size: 1.8rem ;
-  color: #007bff;
+  color: var(--primary-color);
   margin-bottom: 15px;
 }
 
 .about-text p{
   line-height: 1.7rem;
-  color: #444;
+  color: var(--text-secondary);
   margin-bottom: 25px;
   font-size: 1.2rem;
 }
 
 .explore-btn {
   display: inline-block;
-  color: #000;
-  background: #fff;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -335,7 +384,7 @@ body{
 
  
 .explore-btn span i:hover{
-  background: #007bff;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -357,12 +406,13 @@ body{
 
 .services-section {
   padding: 80px 10%;
-  background-color: #fff;
+  background-color: var(--bg-primary);
   text-align: center;
+  transition: var(--transition);
 }
 
 .service-container h2{
-  color: #222;
+  color: var(--text-primary);
   font-weight: 600;
   font-size: 60px;
   margin-bottom: 40px;
@@ -378,7 +428,7 @@ body{
   transform-origin: center;
   width: 100px;
   height: 3px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   border-radius: 5px;
   transition: transform 0.5s ease;
 }
@@ -394,7 +444,7 @@ body{
   font-size: 18px;
   font-weight: 100;
   margin-bottom: 20px;
-  color: #007bff;
+  color: var(--primary-color);
   text-align: left;
 }
 
@@ -403,7 +453,7 @@ body{
   font-size: 40px;
   font-weight: 300;
   margin-bottom: 20px;
-  color: #000;
+  color: var(--text-primary);
   text-align: left;
 }
 
@@ -437,7 +487,7 @@ body{
 }
 
 .modern-filter-btn.active {
-  background: #007bff;
+  background: var(--primary-color);
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
   transform: translateY(-1px);
@@ -450,11 +500,12 @@ body{
 }
 
 .card {
-  background: #f9f9f9;
-  border-radius: 10px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition);
+  border: 1px solid var(--border-color);
 }
 
 .card:hover {
@@ -472,19 +523,19 @@ body{
 }
 
 .card-content h3 {
-  color: #007bff;
+  color: var(--primary-color);
   font-size: 20px;
   margin-bottom: 10px;
 }
 
 .card-content p {
   font-size: 15px;
-  color: #555;
+  color: var(--text-muted);
   margin-bottom: 15px;
 }
 
 .card-content .btn {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 8px 20px;
   text-decoration: none;
@@ -546,7 +597,8 @@ body{
 
 .therapists-section {
   padding: 4rem 2rem;
-  background: #f5f5f5;
+  background: var(--bg-primary);
+  transition: var(--transition);
 }
 
 .thera-title {
@@ -568,7 +620,7 @@ body{
   transform-origin: center;
   width: 100px;
   height: 3px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   border-radius: 5px;
   transition: transform 0.5s ease;
 }
@@ -619,7 +671,7 @@ body{
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: #007bff;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -633,6 +685,9 @@ body{
   position: relative;
   overflow: hidden;
   border-radius: 14px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition);
 }
 
 .therapist-card img {
@@ -681,7 +736,7 @@ body{
 
 .t-overlay a {
   margin-top: 0.8rem;
-  background: #007bff;
+  background: var(--primary-color);
   padding: 0.55rem 1.1rem;
   border-radius: 8px;
   color: #fff;
@@ -698,7 +753,8 @@ body{
 
 .resources-section {
   padding: 4rem 2rem;
-  background: #fff;
+  background: var(--bg-primary);
+  transition: var(--transition);
 }
 
 
@@ -706,7 +762,7 @@ body{
   text-align: center;
   font-size: 3.5rem;
   font-weight: 700;
-  color: #222;
+  color: var(--text-primary);
   margin-bottom: 2rem;
   opacity: 1;
   transform: translateY(-20px);
@@ -723,7 +779,7 @@ body{
   transform-origin: center;
   width: 100px;
   height: 3px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   border-radius: 5px;
   transition: transform 0.5s ease;
 }
@@ -745,7 +801,9 @@ body{
   width: 70%;
   padding: 0.7rem 1rem;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-size: 1rem;
 }
@@ -763,18 +821,18 @@ body{
 
 .filter-btnn {
   padding: 15px 25px;
-  background: #e9efff;
-  border: none;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #007bff;
+  color: var(--primary-color);
   transition: 0.3s ease;
 }
 
 .filter-btnn.active,
 .filter-btnn:hover {
-  background: #007bff;
+  background: var(--primary-color);
   color: white;
 }
 
@@ -789,7 +847,8 @@ body{
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  background: #f2f2f2;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   opacity: 1;
   transform: translateY(30px);
   transition: 0.6s ease;
@@ -827,7 +886,7 @@ body{
 
 .overlay a {
     display: inline-block;
-    background: #007bff;
+    background: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 6px;
     text-decoration: none;
@@ -968,7 +1027,7 @@ body{
 }
 
 .contact-link:hover{
-  background: #007bff;
+  background: var(--primary-color);
   color: #fff;
   border-radius: 20px;
 }
@@ -1045,7 +1104,7 @@ transform: translateY(-5px);
    ======================== */
 
 .site-footer {
-  background: #1a1a1a;
+  background: var(--footer-bg);
   color: #fff;
   padding: 80px 0 30px;
   margin-top: auto;
@@ -1113,7 +1172,7 @@ transform: translateY(-5px);
   bottom: -8px;
   width: 30px;
   height: 2px;
-  background: #007bff;
+  background: var(--primary-color);
 }
 
 .footer-info ul {
@@ -1133,7 +1192,7 @@ transform: translateY(-5px);
 }
 
 .footer-info ul li a:hover {
-  color: #007bff;
+  color: var(--primary-color);
   transform: translateX(5px);
 }
 
@@ -1157,7 +1216,7 @@ transform: translateY(-5px);
 }
 
 .social-icon:hover {
-  background: #007bff;
+  background: var(--primary-color);
   transform: translateY(-3px) rotate(360deg);
 }
 
@@ -1411,14 +1470,14 @@ transform: translateY(-5px);
 .booking-page-section {
   padding: 120px 20px 80px; /* Top padding to clear fixed navbar */
   min-height: 100vh;
-  background: #f4f7fc;
+  background: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .booking-container {
-  background: #ffffff;
+  background: var(--bg-secondary);
   width: 100%;
   max-width: 800px;
   border-radius: 16px;
@@ -1434,13 +1493,13 @@ transform: translateY(-5px);
 
 .booking-header h2 {
   font-size: 2.2rem;
-  color: #007bff;
+  color: var(--primary-color);
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .booking-header p {
-  color: #666;
+  color: var(--text-muted);
   font-size: 1.1rem;
 }
 
@@ -1464,7 +1523,7 @@ transform: translateY(-5px);
 .form-group label {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
@@ -1472,10 +1531,10 @@ transform: translateY(-5px);
 .form-group select,
 .form-group textarea {
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
-  background: #fdfdfd;
+  background: var(--bg-primary);
   transition: all 0.3s ease;
   font-family: inherit;
 }
@@ -1483,7 +1542,7 @@ transform: translateY(-5px);
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #007bff;
+  border-color: var(--primary-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
   background: #fff;
@@ -1491,7 +1550,7 @@ transform: translateY(-5px);
 
 .booking-form .submit-btn {
   width: 100%; /* Responsive fill */
-  background: #007bff;
+  background: var(--primary-color);
   color: white;
   padding: 15px;
   border: none;
@@ -1501,11 +1560,11 @@ transform: translateY(-5px);
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition */
   margin-top: 10px;
-  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .booking-form .submit-btn:hover {
-  background: #0056b3;
+  background: var(--primary-hover);
   transform: translateY(-3px); /* Interactive lift */
   box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
 }
@@ -1576,7 +1635,8 @@ transform: translateY(-5px);
 /* Process Section (How It Works) */
 .process-section {
   padding: 80px 8%;
-  background: #fff;
+  background: var(--bg-primary);
+  transition: var(--transition);
 }
 
 .process-steps {
@@ -1592,9 +1652,10 @@ transform: translateY(-5px);
   min-width: 250px;
   text-align: center;
   padding: 40px 20px;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition);
+  border: 1px solid var(--border-color);
 }
 
 .step-card:hover {
@@ -1605,7 +1666,7 @@ transform: translateY(-5px);
 .step-card .icon-box {
   width: 80px;
   height: 80px;
-  background: #007bff;
+  background: var(--primary-color);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1625,7 +1686,7 @@ transform: translateY(-5px);
 
 .info-section.reverse-layout {
   flex-direction: row-reverse;
-  background: #f4f7fc;
+  background: var(--bg-secondary);
 }
 
 .info-content {
@@ -1634,13 +1695,13 @@ transform: translateY(-5px);
 
 .info-content h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 20px;
 }
 
 .info-content p {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -1675,7 +1736,7 @@ transform: translateY(-5px);
 /* FAQ Section */
 .faq-section {
   padding: 80px 8%;
-  background: #fff;
+  background: var(--bg-secondary);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -1685,7 +1746,7 @@ transform: translateY(-5px);
 }
 
 .faq-item {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 15px;
 }
 
@@ -1697,7 +1758,7 @@ transform: translateY(-5px);
   padding: 20px 0;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1717,13 +1778,13 @@ transform: translateY(-5px);
 
 .faq-answer p {
   padding-bottom: 20px;
-  color: #666;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
-  background: #007bff;
+  background: var(--primary-color);
   color: white;
   text-align: center;
   padding: 80px 20px;
@@ -1741,8 +1802,8 @@ transform: translateY(-5px);
 }
 
 .btn-light {
-  background: white;
-  color: #007bff;
+  background: var(--white);
+  color: var(--primary-color);
   padding: 15px 40px;
   border-radius: 50px;
   text-decoration: none;
@@ -1775,4 +1836,109 @@ transform: translateY(-5px);
     text-align: left;
     display: inline-block;
   }
+}
+
+/* ========================
+   LEGAL & SUPPORT PAGE STYLES
+   ======================== */
+
+.legal-page {
+  margin-top: 100px;
+  padding: 60px 20px;
+  background: var(--bg-primary);
+  transition: var(--transition);
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-secondary);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.legal-container h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.legal-container h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.legal-container p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.legal-container ul {
+  padding-left: 20px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Help Center Styles */
+.help-center-page {
+  margin-top: 80px;
+}
+
+.help-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%) !important;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.help-card {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.help-card h3 {
+  color: var(--text-primary);
+}
+
+.help-card p {
+  color: var(--text-muted);
+}
+
+/* Crisis Resources Styles */
+.emergency-banner {
+  background: #dc3545 !important;
+  color: #fff !important;
+}
+
+.hotline-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color) !important;
+  transition: var(--transition);
+}
+
+.hotline-card h2 {
+  color: var(--primary-color) !important;
+}
+
+.hotline-card a {
+  color: var(--primary-color) !important;
 }

@@ -274,16 +274,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'slot-card';
       // Inline styles for simplicity, move to CSS for production
-      card.style.cssText = 'background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; transition: 0.3s;';
+      card.style.cssText = 'background: var(--bg-secondary); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid var(--border-color); transition: 0.3s;';
 
       card.innerHTML = `
-        <div class="time" style="font-size: 1.4rem; color: #007bff; font-weight: 700; margin-bottom: 10px;">${slot.time}</div>
-        <div class="details" style="color: #555; margin-bottom: 20px;">
+        <div class="time" style="font-size: 1.4rem; color: var(--primary-color); font-weight: 700; margin-bottom: 10px;">${slot.time}</div>
+        <div class="details" style="color: var(--text-secondary); margin-bottom: 20px;">
           <p style="font-weight:600; font-size: 1.1rem; margin-bottom: 5px;">${slot.doctor}</p>
           <p style="font-size: 0.9rem;">${type} Session</p>
         </div>
         <a href="#" class="btn book-slot-btn" data-time="${slot.time}" data-doctor="${slot.doctor}" 
-           style="background: #007bff; border-radius: 50px; display: inline-block; padding: 10px 25px; color: #fff; text-decoration: none;">Book Now</a>
+           style="background: var(--primary-color); border-radius: 50px; display: inline-block; padding: 10px 25px; color: #fff; text-decoration: none;">Book Now</a>
       `;
 
       // Add hover effect via JS listener or CSS class 'slot-card:hover' in CSS file
@@ -357,4 +357,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+});
+
+/* ==========================
+   THEME TOGGLE LOGIC (DARK MODE)
+   ========================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // 1. Check for saved theme in localStorage
+  const savedTheme = localStorage.getItem('theme');
+
+  // 2. Check for system preference if no saved theme
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    body.classList.add('dark-mode');
+  }
+
+  if (themeToggle) {
+    // Initial icon check
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+
+      // Save preference
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+      // Toggle icon
+      if (isDark) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
+  }
 });

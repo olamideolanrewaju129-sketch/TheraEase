@@ -32,76 +32,84 @@
                 <li><a href="/theraease.html#contact">Contact</a></li>
             </ul>
         </nav>
+        <div id="theme-toggle" class="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </div>
         <a href="/book.html" class="book-btn">Book Sessions <span><i class="fa-solid fa-arrow-right"></i></span></a>
     </header>
 
-    <div class="crisis-page" style="margin-top: 80px; padding-bottom: 80px;">
+    <div class="crisis-page">
         <!-- Emergency Alert Banner -->
-        <div class="emergency-banner"
-            style="background: #dc3545; color: #fff; padding: 20px; text-align: center; font-weight: 700; font-size: 1.2rem;">
-            <i class="fa-solid fa- triangle-exclamation"></i> IF YOU ARE IN IMMEDIATE DANGER, CALL 911 OR YOUR LOCAL
+        <div class="emergency-banner">
+            <i class="fa-solid fa-triangle-exclamation"></i> IF YOU ARE IN IMMEDIATE DANGER, CALL 911 OR YOUR LOCAL
             EMERGENCY SERVICES IMMEDIATELY.
         </div>
 
         <!-- Crisis Hero -->
-        <section class="crisis-hero" style="padding: 80px 20px; text-align: center; background: #fff;">
+        <section class="crisis-hero" style="padding: 80px 20px; text-align: center; background: var(--bg-secondary);">
             <div class="container" style="max-width: 900px; margin: 0 auto;">
-                <h1 style="font-size: 3rem; color: #222; margin-bottom: 20px;">Support is Available</h1>
-                <p style="color: #666; font-size: 1.2rem; margin-bottom: 40px;">You are not alone. There are people
+                <h1 style="font-size: 3rem; color: var(--text-primary); margin-bottom: 20px;">Support is Available</h1>
+                <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">You are not alone. There
+                    are people
                     ready to help you through this moment.</p>
 
                 <div class="hotline-grid"
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    
                     <!-- Card 1 -->
-                    <div class="hotline-card"
-                        style="border: 2px solid #dc3545; padding: 40px; border-radius: 15px; text-align: center;">
-                        <h2 style="color: #dc3545; margin-bottom: 15px;">988 Suicide & Crisis Lifeline</h2>
+                    <div class="hotline-card" style="border-color: #dc3545 !important;">
+                        <h2 style="color: #dc3545 !important; margin-bottom: 15px;">988 Suicide & Crisis Lifeline</h2>
                         <p style="margin-bottom: 20px;">Available 24/7 for anyone in the US and Canada.</p>
                         <a href="tel:988"
-                            style="font-size: 2.5rem; color: #dc3545; font-weight: 800; text-decoration: none; display: block; margin-bottom: 10px;">988</a>
-                        <p style="color: #888;">Call or Text</p>
+                            style="font-size: 2.5rem; color: #dc3545 !important; font-weight: 800; text-decoration: none; display: block; margin-bottom: 10px;">988</a>
+                        <p style="color: var(--text-muted);">Call or Text</p>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="hotline-card"
-                        style="border: 2px solid #007bff; padding: 40px; border-radius: 15px; text-align: center;">
-                        <h2 style="color: #007bff; margin-bottom: 15px;">Crisis Text Line</h2>
+                    <div class="hotline-card">
+                        <h2 style="margin-bottom: 15px;">Crisis Text Line</h2>
                         <p style="margin-bottom: 20px;">Text HOME to 741741 to connect with a crisis counselor.</p>
                         <a href="sms:741741"
-                            style="font-size: 2rem; color: #007bff; font-weight: 800; text-decoration: none; display: block; margin-bottom: 10px;">Text
+                            style="font-size: 2rem; color: var(--primary-color); font-weight: 800; text-decoration: none; display: block; margin-bottom: 10px;">Text
                             "HOME"</a>
-                        <p style="color: #888;">to 741741</p>
+                        <p style="color: var(--text-muted);">to 741741</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- International Resources -->
-        <section class="intl-resources" style="padding: 60px 20px; background: #f9f9f9;">
+        <section class="intl-resources" style="padding: 60px 20px; background: var(--bg-primary);">
             <div class="container" style="max-width: 900px; margin: 0 auto;">
-                <h2 style="text-align: center; margin-bottom: 40px;">International Crisis Resources</h2>
+                <h2 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">International Crisis
+                    Resources</h2>
                 <div
-                    style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    style="background: var(--bg-secondary); padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <ul style="list-style: none; padding: 0;">
                         <li
-                            style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                            <div><strong>United Kingdom</strong><br><span style="color: #666;">NHS Emergency</span>
+                            style="padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                            <div><strong style="color: var(--text-primary);">United Kingdom</strong><br><span
+                                    style="color: var(--text-muted);">NHS Emergency</span>
                             </div>
-                            <a href="tel:111" style="color: #007bff; font-weight: 700; text-decoration: none;">Call
+                            <a href="tel:111"
+                                style="color: var(--primary-color); font-weight: 700; text-decoration: none;">Call
                                 111</a>
                         </li>
                         <li
-                            style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                            <div><strong>Australia</strong><br><span style="color: #666;">Lifeline</span></div>
-                            <a href="tel:131114" style="color: #007bff; font-weight: 700; text-decoration: none;">13 11
+                            style="padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                            <div><strong style="color: var(--text-primary);">Australia</strong><br><span
+                                    style="color: var(--text-muted);">Lifeline</span></div>
+                            <a href="tel:131114"
+                                style="color: var(--primary-color); font-weight: 700; text-decoration: none;">13 11
                                 14</a>
                         </li>
                         <li
-                            style="padding: 15px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                            <div><strong>Global Search</strong><br><span style="color: #666;">Find a helpline by
+                            style="padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                            <div><strong style="color: var(--text-primary);">Global Search</strong><br><span
+                                    style="color: var(--text-muted);">Find a helpline by
                                     country</span></div>
                             <a href="https://findahelpline.com/" target="_blank"
-                                style="color: #007bff; font-weight: 700; text-decoration: none;">FindAHelpline.com</a>
+                                style="color: var(--primary-color); font-weight: 700; text-decoration: none;">FindAHelpline.com</a>
                         </li>
                     </ul>
                 </div>
@@ -109,29 +117,33 @@
         </section>
 
         <!-- Immediate Steps -->
-        <section class="crisis-steps" style="padding: 80px 20px; background: #fff;">
+        <section class="crisis-steps" style="padding: 80px 20px; background: var(--bg-secondary);">
             <div class="container" style="max-width: 800px; margin: 0 auto;">
-                <h2 style="text-align: center; margin-bottom: 40px;">Immediate Steps You Can Take</h2>
-                <div class="steps-list" style="color: #444; line-height: 1.8;">
-                    <div style="margin-bottom: 25px; padding-left: 50px; position: relative;">
+                <h2 style="text-align: center; margin-bottom: 40px; color: var(--text-primary);">Immediate Steps You Can
+                    Take</h2>
+                <div class="steps-list" style="color: var(--text-secondary); line-height: 1.8;">
+                    <div style="margin-bottom: 25px; padding-left: 60px; position: relative;">
                         <div
-                            style="position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                            style="position: absolute; left: 0; top: 0; width: 40px; height: 40px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
                             1</div>
-                        <p><strong>Reach out to someone you trust.</strong> Call a friend, family member, or neighbor
+                        <p><strong style="color: var(--text-primary);">Reach out to someone you trust.</strong> Call a
+                            friend, family member, or neighbor
                             and tell them how you're feeling.</p>
                     </div>
-                    <div style="margin-bottom: 25px; padding-left: 50px; position: relative;">
+                    <div style="margin-bottom: 25px; padding-left: 60px; position: relative;">
                         <div
-                            style="position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                            style="position: absolute; left: 0; top: 0; width: 40px; height: 40px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
                             2</div>
-                        <p><strong>Remove any dangerous items.</strong> If possible, move away from things that could be
+                        <p><strong style="color: var(--text-primary);">Remove any dangerous items.</strong> If possible,
+                            move away from things that could be
                             used to hurt yourself.</p>
                     </div>
-                    <div style="margin-bottom: 25px; padding-left: 50px; position: relative;">
+                    <div style="margin-bottom: 25px; padding-left: 60px; position: relative;">
                         <div
-                            style="position: absolute; left: 0; top: 0; width: 35px; height: 35px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
+                            style="position: absolute; left: 0; top: 0; width: 40px; height: 40px; background: #dc3545; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700;">
                             3</div>
-                        <p><strong>Go to the nearest Emergency Room.</strong> If you cannot stay safe, hospital staff
+                        <p><strong style="color: var(--text-primary);">Go to the nearest Emergency Room.</strong> If you
+                            cannot stay safe, hospital staff
                             can provide a secure environment and immediate care.</p>
                     </div>
                 </div>
