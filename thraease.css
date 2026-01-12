@@ -1180,26 +1180,7 @@ transform: translateY(-5px);
   }
 }
 
-/* ========================
-   RESPONSIVE DESIGN (Mobile)
-   ======================== */
 
-.hamburger-menu {
-  display: none;
-  font-size: 1.8rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .navbar {
-    padding: 20px 30px;
-  }
-  
-  .hamburger-menu {
-    display: block;
-    z-index: 1001; /* Above mobile menu */
-  }
 
 
 
@@ -1560,7 +1541,7 @@ transform: translateY(-5px);
   }
 }
 
-}
+
 
 
 
